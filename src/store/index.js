@@ -22,11 +22,14 @@ const counterSlice = createSlice({
     decrementByAmount: (state, action) => {
       state.value -= action.payload;
     },
+    reset: (state) => {
+      state.value = 5;
+    }
   },
 });
 
 export const selectCount = (state) => state.count.value;
-export const { increment, decrement, incrementByAmount, decrementByAmount } =
+export const { increment, decrement, incrementByAmount, decrementByAmount, reset } =
   counterSlice.actions;
 
 export default configureStore({

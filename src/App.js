@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement, selectCount } from "./store";
+import { increment, decrement, reset, selectCount } from "./store";
 
 function App() {
   const count = useSelector(selectCount);
@@ -20,6 +20,7 @@ function App() {
         <div style={{flexDirection: 'row'}}>
         <button onClick={handleAddButton}>Add</button>
         <button onClick={handleSubButton}>Subtract</button>
+        <button onClick={() => dispatch(reset())}>Reset</button>
         </div>
       </header>
     </div>
