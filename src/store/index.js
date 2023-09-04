@@ -4,7 +4,7 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 const counterSlice = createSlice({
   name: "counter",
   initialState: {
-    value: 0,
+    value: 5,
   },
   reducers: {
     // immer library allows us to pass a 'mutated' state
